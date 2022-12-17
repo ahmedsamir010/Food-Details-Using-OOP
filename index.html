@@ -1,0 +1,412 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="stylesheet" href="css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/logo (1).png">
+
+  </head>
+  <body>
+    
+
+ <div class="screen position-fixed justify-content-center align-items-center">
+  <i class="fa fa-spinner fa-spin fa-5x "></i>
+</div>
+
+
+
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="header">Halawa Resturant</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex align-items-center" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+   
+        <li class=" p-2"><a class="nav-link " aria-current="page" id="Categories">Categories</a></li>
+        <li  class=" p-2" ><a class="nav-link " aria-current="page" id="Area">Area</a></li>
+        <li  class=" p-2"><a class="nav-link " aria-current="page" id="Ingredients">Ingredients</a></li>
+        <li class="nav-item p-2"><a class="nav-link " aria-current="page" id="search">Search  <i class="bi bi-search-heart"></i></a></li>
+        <li  class=" p-2"><a class="nav-link " aria-current="page" id="ContactUs">Contact Us</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+    <header class="py-5" id="mainPage">
+      <div class="container-fluid p-2 mt-3">
+        <div class="row gy-4" id="myRow">
+
+
+        </div>
+        
+      </div>
+    </header>
+   
+    <!-- Dtails Meals -->
+    <section class="detailsMeal   my-5 d-none "id="detailsSection" >
+      <div class="container-fluid">
+        
+        <div class="row mt-3 p-2" id="detailsMealRow">
+  
+
+
+
+          </div>
+
+      
+        </div>
+     
+        
+      </section> 
+    <!-- End Dtails Meals -->
+
+    <!-- Start Category Meals -->
+
+     <section class="category d-none" id="categorySection">
+
+<div class="container-fluid my-5">
+<div class="row gy-4" id="categoryMeals">
+ 
+
+
+  
+</div>
+
+</div>
+</section>  
+
+    <!-- End Category Meals -->
+
+
+<!-- Start Details Meal -->
+
+
+<section class="categoryDetails d-none" id="categoryDetailsSection">
+
+  <div class="container-fluid my-5">
+  <div class="row gy-4" id="categoryDetails">
+  
+  
+    
+  </div>
+  
+  </div>
+  </section> 
+  
+    <!-- Start Area Meals -->
+ <section class="area d-none" id="sectionArea">
+      <div class="container-fluid text-center my-5 py-2 mt-5">
+        <div class="row gy-4 mt-3 p-2" id="area">
+         
+        </div>
+      </div>
+    </section>
+ 
+
+
+      <section class="ingredients d-none" id="ingredientsSection">
+      <div class="container-fluid my-5 py-2">
+        <div class="row mt-3 p-2 g-3" id="ingredients">
+         
+
+           
+
+
+
+
+
+        </div>
+      </div>
+    </section> 
+
+
+      <section class="contact mx-auto text-center mt-5 d-none" id="contactSection">
+      <div class="contactHead p-2">
+        <h2 class="text-light mt-5 mb-4">ContacUs...</h2>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+        
+        
+          <div class="col-md-6 my-3">
+   
+              <div class="text-center">
+               
+                <input id="inputName" type="text" placeholder="Enter Your Name" class="form-control "/>
+               
+                <div id="alertName"  class="alert alert-danger me-4 w-100 mt-1 d-none" >
+                   <p>
+                    Special Characters and Numbers not allowed
+                  </p>
+                </div>
+            
+              </div>
+
+              </div>
+
+
+
+              <div class="col-md-6 my-3">
+             
+                <div class="text-center">
+               
+                  <input id="inputEmail" type="email" placeholder="Enter Email" class="form-control "/>
+                <div id="alertEmail"  class="alert alert-danger me-4 w-100 mt-1 d-none">
+                  <p>Enter valid email. *Ex: xxx@yyy.zzz</p>
+              </div>
+            
+            </div>
+           
+          </div>
+
+            <div class="col-md-6  my-3">
+   
+              <div class="text-center">
+                <input id="inputPhone" type="tel" placeholder="Enter Phone" class="form-control "/>
+                <div id="alertPhone"  class="alert alert-danger me-4 w-100 mt-1 d-none" >
+                   <p>
+                    Enter valid Phone Number
+                  </p>
+                </div>
+              </div>
+
+              </div>
+        
+              <div class="col-md-6  my-3">
+             
+                <div class="text-center">
+              
+                  <input id="inputAge" type="number" placeholder="Enter Age" class="form-control "/>
+               
+                  <div id="alertAge"  class="alert alert-danger me-4 w-100 mt-1 d-none">
+                  <p>Enter valid Age      </p>
+              </div>
+             
+            </div>
+            </div>
+
+
+            <div class="col-md-6  my-3">
+   
+              <div class="text-center">
+                <input id="inputPassword" type="password" placeholder="Enter Password" class="form-control "/>
+                <div id="alertPassword"  class="alert alert-danger me-4 w-100 mt-1 d-none" >
+                   <p>
+                    Enter valid password *Minimum eight characters, at least one letter and one number:*
+                  </p>
+                </div>
+              </div>
+              </div>
+   
+
+              <div class="col-md-6  my-3">
+   
+                <div class="text-center">
+                  <input id="inputRePassword" type="password" placeholder="Enter RePassword" class="form-control"/>
+                  <div id="alertRepassword"  class="alert alert-danger me-4 w-100 mt-1 d-none" >
+                     <p>
+                      Enter valid Repassword
+                    </p>
+                  </div>
+                </div>
+                </div>
+          
+
+
+        </div>
+        <button type="submit" id="submit" class="btn btn-outline-danger disabled" >Submit</button>
+
+
+
+
+
+
+<div class=" mt-5 mx-auto">
+<button class="btn btn-success w-25 d-none text-center my-5" id="success">Success</button>
+</div>
+      </div>
+    </section>   
+
+
+ <section class="search py-5 d-none" id="searchSection">
+
+<div class="container-fluid my-5">
+
+<div class="row">
+
+<div class="col-md-6">
+
+
+<input id="searchInput" class="form-control mb-2  " placeholder="Search By Name" >
+
+
+  </div>
+
+
+<div class="col-md-6">
+
+
+<input class="form-control " type="text" maxlength="1" id="searchLetter" placeholder="Search By First Letter...">
+
+
+</div>
+  
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<section class="displaySearchMealsName  d-none" id="searchSectionName"> 
+
+  <div class="container-fluid my-5">
+
+    <div class="row g-4" id="searchMealName">
+    
+    
+    
+    </div>
+    
+    </div>
+    
+    
+</section>
+
+
+
+<section class="displaySearchMealsLetter d-none" id="searchSectionLetter" > 
+
+  <div class="container-fluid my-5">
+
+    <div class="row g-4" id="searchMealLetter">
+    
+    
+
+    
+    </div>
+    
+    </div>
+    
+    
+</section>
+
+
+
+<section id="sectionFilterCategory" class=" d-none">  
+
+   
+<div class="container-fluid my-5">
+
+<div class="row" id="displayFilterCategory">
+
+
+  
+
+</div>
+
+</div>
+
+
+
+</section>
+
+
+
+<section id="sectionFilterArea" class=" d-none">  
+
+   
+  <div class="container-fluid my-5">
+  
+  <div class="row" id="displayFilterArea">
+  
+  
+    
+  
+  </div>
+  
+  </div>
+  
+  
+  
+  </section>
+  
+  
+<section id="sectionFilteringredients" class=" d-none"> 
+
+   
+  <div class="container-fluid my-5">
+  
+  <div class="row" id="displayFilteringredients">
+  
+  
+    
+  
+  </div>
+  
+  </div>
+  
+  
+  
+  </section>
+  
+
+  <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+
+<footer class=" bg-dark">
+  <div class="container mt-3 d-flex justify-content-between align-items-center bg-dark pt-3">
+<div class="infoMe">
+  <p>© 2022 Ahmed samir, all rights reserved</p>
+</div>
+<div class="infoSocial">
+  <a href="https://www.linkedin.com/in/ahmed-samir-sakr-/" target="_blank">
+  <i class="fa-brands fa-linkedin-in px-2"></i>
+  </a>
+  <a href="https://www.facebook.com/ahmedsamir.sakr.5" target="_blank">
+    <i class="fa-brands fa-facebook-f"></i> 
+     </a>
+
+</div>
+
+  </div>
+</footer>
+  
+  
+
+  
+
+
+ 
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+     <script src="js/regexContactModul.js" type="module"></script> 
+
+    <script src="js/index.js" type="module"></script>
+  </body>
+</html> 
+
