@@ -42,6 +42,7 @@ export class ingredients {
     document.getElementById("sectionFilterArea").classList.add("d-none");
     document.getElementById("sectionFilteringredients").classList.add("d-none");
 
+    document.getElementById("sectionAddToCard").classList.add("d-none")
 
 
 

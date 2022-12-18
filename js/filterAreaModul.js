@@ -37,6 +37,7 @@ export class filterArea {
             `;
       }
 
+      document.getElementById("sectionAddToCard").classList.add("d-none")
 
       document.getElementById("mainPage").classList.add("d-none")
       document.getElementById("contactSection").classList.add("d-none")

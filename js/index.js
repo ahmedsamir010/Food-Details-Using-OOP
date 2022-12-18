@@ -3,6 +3,8 @@ import { ingredients } from "./ingredientsModul.js";
 import { category } from "./categoryModul.js";
 import { user } from "./detailsMealsModul.js";
 import { search } from "./searchMealsModul.js";
+import { card } from "./addCardModul.js";
+let car=new card()
 let c = new category();
 let i = new ingredients()
 let a=new area()

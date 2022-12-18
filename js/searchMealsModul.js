@@ -53,6 +53,7 @@ document.getElementById("sectionFilterCategory").classList.add("d-none")
 
 
 document.getElementById("searchSectionLetter").classList.add("d-none")
+document.getElementById("sectionAddToCard").classList.add("d-none")
 
 
 

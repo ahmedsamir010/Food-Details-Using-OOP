@@ -1,4 +1,5 @@
-
+import { card } from "./addCardModul.js";
+let ca=new card();
 export class user {
   constructor() {}
   async getApi(meal) {
@@ -109,16 +110,26 @@ document.getElementById("detailsSection").classList.remove("d-none")
     document.getElementById("detailsMealRow").innerHTML = cartonaDetails;
 
 add(meals);
+
+
+
   }
 
   
 }
+
+
+
+
 let arr=JSON.parse(localStorage.getItem('meal')) ? JSON.parse(localStorage.getItem('meal')) : [];
+
 function add(meals){
   $("#Add").click(function () {
     console.log(arr);      
 arr.push(meals)
    arr=localStorage.setItem('meal',JSON.stringify(arr));
     arr=JSON.parse(localStorage.getItem('meal')) ? JSON.parse(localStorage.getItem('meal')) : [];
-})
+ca.printOrder(arr)
+  })
+
 }
