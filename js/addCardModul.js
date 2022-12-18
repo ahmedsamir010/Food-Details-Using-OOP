@@ -1,35 +1,72 @@
 export class card {
-  constructor() {}
-  async printOrder(meals) {
-console.log(meals);
+  constructor() {
+ let arr=JSON.parse(localStorage.getItem('meal'));
+ if(JSON.parse(localStorage.getItem('meal')))
+ {
+    console.log('arr');
+    this.printOrder(arr);
+     }
+}
+
+   printOrder(_arr) {
+
 let cartonaCard="";
 let total=0;
-let arr=[120,200,95,77,66,33,120,200,95,77,66,33,44,55,77,65,131,93.5,454,989,120,200,95,77,66,33,44,55,77,65,131,93.5,454,989,120,200,95,77,66,33,44,55,77,65,131,93.5,454,989,120,200,95,77,66,33,44,55,77,65,131,93.5,454,989,120,200,95,77,66,33,44,55,77,65,131,93.5,454,989120,200,95,77,66,33,44,55,77,65,131,93.5,454,989]
-for(let i =0; i < meals.length;++i)
+for(let i =0; i < _arr.length;++i)
 {
-    total+=arr[i];
+    total+=Number(_arr[i][0].idMeal.toString().slice(1,3));
     cartonaCard+=`
- <div class="col-md-2">
+ <div class="col-md-2 mt-2">
     <div class="imgItem text-center">
-    <img src="${meals[i][0].strMealThumb}" class="w-100 rounded-2" alt="" />
-    <h1 class="fs-1">${meals[i][0].strMeal}</h1>
-<p>${arr[i]} $</p>
-<div class="text-center">
-<p>Your Total is ${total}</p>
-</div>
+    <img src="${_arr[i][0].strMealThumb}" class="w-100 rounded-2" alt="" />
+    <h1 class="h5">${_arr[i][0].strMeal}</h1>
+<p>${_arr[i][0].idMeal.toString().slice(1,3)} $</p>
+
 </div>
   </div>
 
 
     `
 }
-document.getElementById("sectionAddToCard").classList.add("d-none")
-
-
-document.getElementById("sectionAddToCard").classList.remove("d-none")
+cartonaCard+=`<div class="text-center">
+<p class="h2">Your Total is ${total} $</p>
+</div>`
 document.getElementById("displayAddToCard").innerHTML = cartonaCard;
 
 
   }
 }
+let car=new card();
+    document.getElementById('Card').addEventListener('click',function(){
+        let arr=JSON.parse(localStorage.getItem('meal'));
+        if(JSON.parse(localStorage.getItem('meal')))
+        {
+           console.log('arr');
+           car.printOrder(arr);
+            }
+        document.getElementById("detailsSection").classList.add("d-none")
+
+        document.getElementById("mainPage").classList.add("d-none")
+        document.getElementById("contactSection").classList.add("d-none")
+        document.getElementById("ingredientsSection").classList.add("d-none")
+        document.getElementById("categorySection").classList.add("d-none")
+        document.getElementById("categoryDetailsSection").classList.add("d-none")
+        document.getElementById("searchSection").classList.add("d-none")
+        document.getElementById("searchSectionName").classList.add("d-none")
+        document.getElementById("searchSectionLetter").classList.add("d-none")
+        document.getElementById("sectionArea").classList.add("d-none")
+        document.getElementById("sectionFilterCategory").classList.add("d-none")
+        document.getElementById("sectionFilterArea").classList.add("d-none")
+        document.getElementById("sectionFilteringredients").classList.add("d-none")
+    
+
+
+        document.getElementById("sectionAddToCard").classList.remove("d-none")
+
+
+
+    })
+
+
+
 

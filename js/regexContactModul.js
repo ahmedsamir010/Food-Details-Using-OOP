@@ -149,6 +149,7 @@ ContactUs.addEventListener("click",function()
 
 
 
+  document.getElementById("sectionAddToCard").classList.add("d-none")
 
   document.getElementById("mainPage").classList.add("d-none") //1
   document.getElementById("ingredientsSection").classList.add("d-none")//6

@@ -129,7 +129,6 @@ function add(meals){
 arr.push(meals)
    arr=localStorage.setItem('meal',JSON.stringify(arr));
     arr=JSON.parse(localStorage.getItem('meal')) ? JSON.parse(localStorage.getItem('meal')) : [];
-ca.printOrder(arr)
   })
 
 }
