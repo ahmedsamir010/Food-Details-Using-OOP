@@ -1,4 +1,5 @@
 import { user } from "./detailsMealsModul.js";
+var cartonaMeals = "";
 export class meals {
   constructor() {
     this.finalMeals();
@@ -13,7 +14,7 @@ export class meals {
 
   async finalMeals() {
     let meals = await this.getApi();
-    let cartonaMeals = "";
+    cartonaMeals="";
     for (let i = 0; i < meals.length; i++) {
       cartonaMeals += `
         <div class="col-md-6 col-lg-3 allImg">
